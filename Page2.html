@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pexodos</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-color: black;
+            overflow: hidden;
+        }
+    
+        .headercontainer {
+        position: absolute;
+        min-width: 100%;
+        z-index: 10;
+        display: inline-block;
+        background-position-x: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        }
+        .header{
+            display: inline-flex;
+            margin-left: auto;
+            margin-left: 1cm;
+        }
+        
+        .headerbuttons{
+            position: fixed;
+            display: flex;
+            right: 10px;
+            top: 40px;
+        }
+        #homebutton{
+            border: none;
+            background: none;
+            padding: 1;
+            color: white;
+        }
+
+        #socialbutton{
+            border: none;
+            background: none;
+            padding: 1;
+            color: white;
+        }
+
+        .aboutmecontent{
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .socials{
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            background-color: rgba(145, 145, 145, 0.75);
+            width: 500px;
+            height: 300px;
+            line-height: 1.5;
+            padding: 10px;
+            border-radius: 5%;
+            text-align: center;
+        }
+        p{
+            position: relative;
+            text-align: center;
+            
+        }
+        .img{
+            filter: blur(00px);
+            height: 100vh;
+            width: 100vw;
+            object-fit: cover;
+        }
+        .aboutmeimg {
+        position: absolute;
+        top: 85px;
+        right: 175px;
+        width: 50px;
+        }
+        .right{
+        text-align: right;
+        padding-right: 0.5cm;
+        /*background-color: rgba(255, 255, 255, 0.25);
+        border-radius: 3cm;
+        border-color: rgba(255, 255, 255, 0.25);*/
+        }
+        .background{
+            position: absolute;
+            background-image: url(media/VRChat_2024-03-25_20-52-36.265_7680x4320.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-width: 100%;
+            min-height: 100%;
+            filter: blur(10px);
+        }
+
+        h2{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        a{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: larger;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="headercontainer">
+        <div class="header">
+            <h1>Pexodos</h1>
+            <div class="headerbuttons">
+                <button onclick="window.location.href='Pexodos.com.html'" id="homebutton"> Home </button> 
+                <br>
+                <button onclick="window.location.href='PAge2.html'" id="socialbutton"> Socials </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="aboutmecontent">
+        <div class="background"></div>
+            <div class="socials">
+                <h2>Places in which you can find me:</h2>
+                <br></br>
+                <div id="links">
+                    <a href="https://www.youtube.com/@pexodos">
+                        <img src="media/Youtube.png" width="40px" alt="">
+                    </a>
+                    <a href="https://twitter.com/pexodos">
+                        <img src="media/Twitter.png" width="40px" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/pexodos/">
+                        <img src="media/Instagram.png" width="40px" alt="">
+                    </a>
+                    <a href="https://www.reddit.com/r/Pexodos">
+                        <img src="media/Reddit.png" width="40px" alt="">
+                    </a>
+                    <a href="https://www.twitch.tv/pexocat">
+                        <img src="media/Twitch.png" width="40px" alt="">
+                    </a>
+                    <a href="https://www.tiktok.com/@pexodos">
+                        <img src="media/Tiktok.png" width="40px" alt="">
+                    </a>
+                </div>
+            </div>
+    </div>
+
+    <script>
+        
+        var dob = '20051228'; 
+        var year = Number(dob.substr(0, 4));
+        var month = Number(dob.substr(4, 2)) - 1;
+        var day = Number(dob.substr(6, 2));
+        var today = new Date();
+        var age = today.getFullYear() - year;
+        if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
+        age--;
+        }
+
+        document.getElementById("age").innerHTML= age;
+
+
+        const homebutton = document.getElementById('homebutton');
+        const socialbutton = document.getElementById('socialbutton');
+
+        /*function redirection{
+            window.location= ("Page2.html")
+        }*/
+
+
+    </script>
+
+
+</body>
+</html>
