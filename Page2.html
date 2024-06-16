@@ -55,9 +55,10 @@
         .socials{
             position: absolute;
             top: 15%;
-            left:36%;
+            /*left:36%; */
+            /* right: 36%; */
             background-color: rgba(122, 122, 122, 0.75);
-            width: 500px;
+            width: 450px;
             height: 300px;
             line-height: 1.5;
             padding: 10px;
@@ -104,6 +105,10 @@
         text-decoration: none;
         font-size: larger;
         }
+
+        .invisible{
+            color: transparent;
+        }
     </style>
     
 </head>
@@ -121,7 +126,7 @@
 
     <div class="aboutmecontent">
         <div class="background"></div>
-            <div class="socials">
+            <div class="socials" id="mobileAdjust">
                 <h2>Places in which you can find me:</h2>
                 <br></br>
                 <div id="links">
@@ -145,7 +150,12 @@
                     </a>
                 </div>
             </div>
-    </div>
+    </div> 
+    <!-- Strange fix for the re-adjustment of content-->
+     <div class="invisible">
+        <span id="age"></span>
+     </div>
+    
 
     <script>
         
@@ -169,6 +179,23 @@
             window.location= ("Page2.html")
         }*/
 
+        function checkMode() {
+        if (window.innerWidth <= 800) {
+            console.log("Mobile mode");
+            // Add code specific to mobile mode
+            document.getElementById("mobileAdjust").style.right = "0px";
+        } else {
+            console.log("Desktop mode");
+            // Add code specific to desktop mode
+            document.getElementById("mobileAdjust").style.right = "36%";
+        }
+        }
+
+        // Initial check
+        checkMode();
+
+        // Check on resize
+        window.addEventListener('resize', checkMode);
 
     </script>
 

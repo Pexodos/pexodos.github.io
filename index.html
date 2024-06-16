@@ -56,10 +56,11 @@
             position: absolute;
             top: 15%;
             /* right: 75px; */
-            right: 150px;
+            /* right: 150px; */
             background-color: rgba(0, 0, 0, 0.75);
-            width: 450px;
-            height: 450px;
+            width: 410px;
+            /* height: 480px; */
+            height: 680px;
             line-height: 1.5;
             padding: 10px;
             border-radius: 5%;
@@ -100,11 +101,11 @@
 
         .content1{
             position: absolute;
-            top: 15%;
-            left: 700px;
+            top: 70%;
+            right: 90px;
             background-color: rgba(0, 0, 0, 0.75);
             width: 410px;
-            height: 210px;
+            height: 190px;
             line-height: 1.5;
             padding: 10px;
             border-radius: 5%;
@@ -119,6 +120,10 @@
         scale: 1;
         text-align: center;
         margin: auto;
+        }
+
+        .invisible{
+            color: transparent;
         }
     </style>
     
@@ -137,25 +142,36 @@
 
     <div class="aboutmecontent">
         <div class="background1"></div>
-            <div class="aboutme">
+            <div class="aboutme" id="mobileAdjust">
                 <h2 style="text-align: center;">Welcome!</h2>
                 <p>I'm Pexo and I'm <span id="age"></span> years old</p>
                 <p id="right">Today is the: <script id="right"> document.write(new Date().toLocaleDateString()); </script></p> 
                 <h3 style="text-align: center;">Things about me:</h3>
                 <p>I'm a learning developer, vr enthusiast, content creator <br> and like to play the piano</p>
-                <p>This website is still "Work in progress" so don't expect too much.</p>
-                <p>It will develop further the more I learn from school and in private.</p>
+                <div>
+                    <iframe class="discord" src="https://lanyard.cnrad.dev/api/499278477694861325?idleMessage=currently%20doing%20nothing...." style="margin: 0 auto;"></iframe>
+                 </div>
+                 <br><br><br><br><br><br><br><br><br>
+                 <p>This website is still "Work in progress" <br>so don't expect too much.</p>
+                <p>It will develop further the more I learn from school <br>and in private.</p>
                 <p style="text-decoration: underline;">Current version of Page: V2</p>
             </div>
     </div>
 
-    <div class="content1">
-        <!-- https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file -->
-        <!-- https://github.com/cnrad/lanyard-profile-readme?tab=readme-ov-file -->
-        <div>
-            <iframe class="discord" src="https://lanyard.cnrad.dev/api/499278477694861325?idleMessage=currently%20doing%20nothing...." style="margin: 0 auto;"></iframe>
-         </div>
+
+<!--     <div class="content1" id="mobileAdjust">
+        https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
+        https://github.com/cnrad/lanyard-profile-readme?tab=readme-ov-file
+        <p>This website is still "Work in progress" <br>so don't expect too much.</p>
+        <p>It will develop further the more I learn from school <br>and in private.</p>
+        <p style="text-decoration: underline;">Current version of Page: V2</p>
     </div>  
+    
+Strange fix for the re-adjustment of content
+<div class="invisible">
+    <span id="age"></span>
+ </div> -->
+
 
     <script>
         
@@ -168,20 +184,36 @@
         if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
         age--;
         }
-
         document.getElementById("age").innerHTML= age;
 
-
+/* 
         const homebutton = document.getElementById('homebutton');
         const socialbutton = document.getElementById('socialbutton');
 
-        /*function redirection{
+        function redirection{
             window.location= ("Page2.html")
-        }*/
+        }
 
         var opacity1 = 1;
-        var opacity2 = 0;
+        var opacity2 = 0; */
 
+                                            
+        function checkMode() {
+        if (window.innerWidth <= 800) {
+            console.log("Mobile mode");
+            // Add code specific to mobile mode
+            document.getElementById("mobileAdjust").style.right = "0px";
+        } else {
+            console.log("Desktop mode");
+            // Add code specific to desktop mode
+            document.getElementById("mobileAdjust").style.right = "100px";
+        }}
+
+        // Initial check
+        checkMode();
+
+        // Check on resize
+        window.addEventListener('resize', checkMode);
     </script>
 
 
