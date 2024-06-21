@@ -186,18 +186,7 @@ Strange fix for the re-adjustment of content
         }
         document.getElementById("age").innerHTML= age;
 
-/* 
-        const homebutton = document.getElementById('homebutton');
-        const socialbutton = document.getElementById('socialbutton');
-
-        function redirection{
-            window.location= ("Page2.html")
-        }
-
-        var opacity1 = 1;
-        var opacity2 = 0; */
-
-                                            
+                                 
         function checkMode() {
         if (window.innerWidth <= 800) {
             console.log("Mobile mode");
@@ -208,10 +197,8 @@ Strange fix for the re-adjustment of content
             // Add code specific to desktop mode
             document.getElementById("mobileAdjust").style.right = "100px";
         }}
-
         // Initial check
         checkMode();
-
         // Check on resize
         window.addEventListener('resize', checkMode);
     </script>

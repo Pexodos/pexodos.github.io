@@ -168,16 +168,11 @@
         if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
         age--;
         }
-
         document.getElementById("age").innerHTML= age;
 
 
         const homebutton = document.getElementById('homebutton');
         const socialbutton = document.getElementById('socialbutton');
-
-        /*function redirection{
-            window.location= ("Page2.html")
-        }*/
 
         function checkMode() {
         if (window.innerWidth <= 800) {
@@ -190,10 +185,8 @@
             document.getElementById("mobileAdjust").style.right = "36%";
         }
         }
-
         // Initial check
         checkMode();
-
         // Check on resize
         window.addEventListener('resize', checkMode);
 
