@@ -17,12 +17,12 @@
         }
     
         .headercontainer {
-        position: absolute;
-        min-width: 100%;
-        z-index: 10;
-        display: inline-block;
-        background-position-x: center;
-        background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            min-width: 100%;
+            z-index: 10;
+            display: inline-block;
+            background-position-x: center;
+            background-color: rgba(0, 0, 0, 0.7);
         }
         .header{
             display: inline-flex;
@@ -58,11 +58,8 @@
         .aboutme{
             position: absolute;
             top: 15%;
-            /* right: 75px; */
-            /* right: 150px; */
             background-color: rgba(0, 0, 0, 0.75);
             width: 410px;
-            /* height: 480px; */
             height: 680px;
             line-height: 1.5;
             padding: 10px;
@@ -80,17 +77,14 @@
             object-fit: cover;
         }
         .aboutmeimg {
-        position: absolute;
-        top: 85px;
-        right: 175px;
-        width: 50px;
+            position: absolute;
+            top: 85px;
+            right: 175px;
+            width: 50px;
         }
         .right{
-        text-align: right;
-        padding-right: 0.5cm;
-        /*background-color: rgba(255, 255, 255, 0.25);
-        border-radius: 3cm;
-        border-color: rgba(255, 255, 255, 0.25);*/
+            text-align: right;
+            padding-right: 0.5cm;
         }
         .background1{
             position: absolute;
@@ -115,19 +109,16 @@
         }
 
         .discord{
-        display: block;
-        position: absolute;
-        border: none;
-        width: 97%;
-        height: 100%;
-        scale: 1;
-        text-align: center;
-        /* margin: auto; */
+            display: block;
+            position: absolute;
+            border: none;
+            width: 97%;
+            height: 100%;
+            scale: 1;
+            text-align: center;
         }
 
-        .invisible{
-            color: transparent;
-        }
+        
     </style>
     
 </head>
@@ -152,7 +143,7 @@
                 <h3 style="text-align: center;">Things about me:</h3>
                 <p>I'm a learning developer, vr enthusiast, content creator <br> and like to play the piano</p>
                 <div>
-                    <iframe class="discord" src="https://lanyard.cnrad.dev/api/499278477694861325?idleMessage=currently%20doing%20nothing...." style="margin: 0 auto;"></iframe>
+                    <iframe class="discord" src="https://lanyard.cnrad.dev/api/499278477694861325?borderRadius=20px&idleMessage=currently%20doing%20nothing...." style="margin: 0 auto;"></iframe>
                  </div>
                  <br><br><br><br><br><br><br><br><br>
                  <p>This website is still "Work in progress" <br>so don't expect too much.</p>
@@ -160,22 +151,6 @@
                 <p style="text-decoration: underline;">Current version of Page: V2</p>
             </div>
     </div>
-    
-
-
-<!--     <div class="content1" id="mobileAdjust">
-        https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
-        https://github.com/cnrad/lanyard-profile-readme?tab=readme-ov-file
-        <p>This website is still "Work in progress" <br>so don't expect too much.</p>
-        <p>It will develop further the more I learn from school <br>and in private.</p>
-        <p style="text-decoration: underline;">Current version of Page: V2</p>
-    </div>  
-    
-Strange fix for the re-adjustment of content
-<div class="invisible">
-    <span id="age"></span>
- </div> -->
-
 
     <script>
         
@@ -194,12 +169,18 @@ Strange fix for the re-adjustment of content
         function checkMode() {
         if (window.innerWidth <= 800) {
             console.log("Mobile mode");
-            // Add code specific to mobile mode
-            document.getElementById("mobileAdjust").style.right = "-10px";
+            // Code specific to mobile mode
+            document.getElementById("mobileAdjust").style.right = "0";
+            document.getElementById("mobileAdjust").style.left = "0";
+            document.getElementById("mobileAdjust").style.margin = "auto";
+            document.getElementById("mobileAdjust").style.width = "380px"
         } else {
             console.log("Desktop mode");
-            // Add code specific to desktop mode
+            // Code specific to desktop mode
             document.getElementById("mobileAdjust").style.right = "100px";
+            document.getElementById("mobileAdjust").style.left = "auto";
+            document.getElementById("mobileAdjust").style.margin = "0";
+            document.getElementById("mobileAdjust").style.width = "410px"
         }}
         // Initial check
         checkMode();
