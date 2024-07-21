@@ -180,12 +180,18 @@
         function checkMode() {
         if (window.innerWidth <= 800) {
             console.log("Mobile mode");
-            // Add code specific to mobile mode
-            document.getElementById("mobileAdjust").style.right = "-10px";
+            // Code specific to mobile mode
+            document.getElementById("mobileAdjust").style.right = "0";
+            document.getElementById("mobileAdjust").style.left = "0";
+            document.getElementById("mobileAdjust").style.margin = "auto";
+            document.getElementById("mobileAdjust").style.width = "370px"
         } else {
             console.log("Desktop mode");
-            // Add code specific to desktop mode
+            // Code specific to desktop mode
             document.getElementById("mobileAdjust").style.right = "36%";
+            document.getElementById("mobileAdjust").style.left = "auto";
+            document.getElementById("mobileAdjust").style.margin = "0";
+            document.getElementById("mobileAdjust").style.width = "410px"
         }
         }
         // Initial check
