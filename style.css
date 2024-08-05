@@ -1,0 +1,113 @@
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-color: black;
+            overflow: hidden;
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+    
+        .headercontainer {
+            position: absolute;
+            min-width: 100%;
+            z-index: 10;
+            display: inline-block;
+            background-position-x: center;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .header{
+            display: inline-flex;
+            margin-left: auto;
+            margin-left: 1cm;
+        }
+        
+        .headerbuttons{
+            position: absolute;
+            display: flex;
+            right: 10px;
+            top: 35px;
+        }
+        #homebutton{
+            border: none;
+            background: none;
+            padding: 1;
+            color: white;
+        }
+
+        #socialbutton{
+            border: none;
+            background: none;
+            padding: 1;
+            color: white;
+        }
+
+        .aboutmecontent{
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .aboutme{
+            position: absolute;
+            top: 16%;
+            background-color: rgba(0, 0, 0, 0.75);
+            width: 410px;
+            height: 680px;
+            line-height: 1.5;
+            padding: 10px;
+            border-radius: 5%;
+            overflow: hidden;
+        }
+        p{
+            position: relative;
+            text-align: center;
+            
+        }
+        .img{
+            filter: blur(00px);
+            height: 100vh;
+            width: 100vw;
+            object-fit: cover;
+        }
+        .aboutmeimg {
+            position: absolute;
+            top: 85px;
+            right: 175px;
+            width: 50px;
+        }
+        .right{
+            text-align: right;
+            padding-right: 0.5cm;
+        }
+        .background1{
+            position: absolute;
+            background-image: url(media/1920_VRChat2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-width: 100%;
+            min-height: 100%;
+            filter: blur(2px);
+        }
+
+        .content1{
+            position: absolute;
+            top: 70%;
+            right: 90px;
+            background-color: rgba(0, 0, 0, 0.75);
+            width: 410px;
+            height: 190px;
+            line-height: 1.5;
+            padding: 10px;
+            border-radius: 5%;
+        }
+
+        .discord{
+            display: block;
+            position: absolute;
+            border: none;
+            width: 97%;
+            height: 100%;
+            scale: 1;
+            text-align: center;
+        }
