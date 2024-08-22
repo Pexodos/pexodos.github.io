@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/pexoIcon.png">
+    <title>Pexodos</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-color: black;
+            overflow: hidden;
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px;
+            place-content: center;
+        }
+    
+        .headercontainer {
+            position: absolute;
+            min-width: 100%;
+            z-index: 10;
+            display: inline-block;
+            background-position-x: center;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .header{
+            display: inline-flex;
+            margin-left: auto;
+            margin-left: 1cm;
+        }
+        
+        .headerbuttons{
+            position: absolute;
+            display: flex;
+            right: 10px;
+            top: 35px;
+        }
+        #menuButton{
+            border: none;
+            background: none;
+            padding: 1;
+            color: white;
+        }
+
+        .backgroundColor{
+            background-color: aquamarine;
+            background-image: linear-gradient(#007762, #00d379);
+            position: absolute;
+            background-position: center;
+            background-size: cover;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .contentContainer{
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        .content1{
+            position: absolute;
+            top: 200px;
+            left: 0px;
+            right: 0px;
+            margin: auto; 
+        }
+        .content2{
+            position: absolute;
+            top: 300px;
+            left: 0px;
+            right: 0px;
+            margin: auto; 
+        }
+        .content3{
+            position: absolute;
+            top: 400px;
+            left: 0px;
+            right: 0px;
+            margin: auto; 
+        }
+        .content4{
+            position: absolute;
+            top: 500px;
+            left: 0px;
+            right: 0px;
+            margin: auto; 
+        }
+        .content5{
+            position: absolute;
+            top: 600px;
+            left: 0px;
+            right: 0px;
+            margin: auto; 
+        }
+        .content6{
+            position: absolute;
+            top: 700px;
+            left: 0px;
+            right: 0px;
+            margin: auto; 
+        }
+
+        .links {
+            display: flex;
+            align-items: center; /* Vertically centers the content */
+            justify-content: center; /* Horizontally centers the content */
+            width: 100%; /* Ensures the container takes up full width */
+            height: 100%; /* Ensures the container takes up full height */
+            position: relative; /* Keeps the positioning intact */
+        }
+        
+        .social {
+            display: flex;
+            align-items: center; /* Vertically centers content */
+            justify-content: center; /* Horizontally centers content */
+            width: 350px;
+            height: 50px;
+            line-height: 1.5;
+            padding: 10px;
+            border-radius: 50px;
+            overflow: hidden;
+            margin: auto;
+            background: linear-gradient(#00d378bb 0 0) var(--p,0)/var(--p,0) no-repeat;
+            transition: .4s, background-position 0s;
+            background-color: rgba(0, 0, 0, 0.75);
+            position: relative;
+        }
+
+        .social:hover {
+            width: 400px;
+            --p: 100%;
+            color: #fff;
+            font-size: large;
+        }
+
+        .social img {
+            width: 40px;
+            height: auto; /* Maintains the aspect ratio */
+            margin-left: 5px; /* Adds space between the image and the text */
+            margin-right: -45px;
+        }
+
+        .text {
+            text-align: center; /* Centers the text horizontally */
+            flex-grow: 1; /* Ensures the text takes up the remaining space */
+        }
+
+        #button {
+            position: absolute;
+            top: -10;
+            left: -10;
+            width: 420px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="headercontainer">
+        <div class="header">
+            <h1>Pexodos</h1>
+            <div class="headerbuttons">
+                <button onclick="window.location.href='index.html'" id="menuButton"> Home </button> 
+                <br>
+                <button onclick="window.location.href='page2.html'" id="menuButton"> Socials </button>
+                <br>
+                <button onclick="window.location.href='TestPage.html'" id="menuButton"> AlternativePage </button>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <div class="contentContainer">
+        <div class="backgroundColor"></div>
+            <div class="content1">
+                <div class="social">
+                    <div class="links">
+                        <a href="https://www.youtube.com/@pexodos" id="button"></a>
+                            <img src="media/Youtube.png" width="50px" alt="">
+                        <div class="text">
+                            <p>Youtube</p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div class="content2">
+                <div class="social">
+                    <div class="links">
+                        <a href="https://x.com/pexodos" id="button"></a>
+                            <img src="media/Twitter.png" width="40px" alt="">
+                        <div class="text">
+                            <p>Twitter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content3">
+                <div class="social">
+                    <div class="links">
+                        <a href="https://www.instagram.com/pexodos/" id="button"></a>
+                            <img src="media/Instagram.png" width="40px" alt="">
+                        <div class="text">
+                            <p>Instagram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content4">
+                <div class="social">
+                    <div class="links">
+                        <a href="https://www.twitch.tv/pexocat" id="button"></a>
+                            <img src="media/Twitch.png" width="40px" alt="">
+                        <div class="text">
+                            <p>Twitch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content5">
+                <div class="social">
+                    <div class="links">
+                        <a href="https://www.tiktok.com/@pexodos" id="button"></a>
+                            <img src="media/Tiktok.png" width="40px" alt="">
+                        <div class="text">
+                            <p>TikTok</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content6">
+                <div class="social">
+                    <div class="links">
+                        <a href="https://vrchat.com/home/user/usr_f67155ae-8cd5-4222-a779-23c9be0d6c63" id="button"></a>
+                            <img src="media/VRChatIcon.png" width="40px" alt="">
+                        <div class="text">
+                            <p>VRChat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
