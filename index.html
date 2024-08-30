@@ -10,7 +10,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
             background-color: black;
-            overflow-y: scroll;
+            overflow: hidden;
             margin: 0; 
             padding: 0; 
             box-sizing: border-box; 
@@ -130,7 +130,7 @@
     </div>
 
     <div class="aboutmecontent">
-        <div class="background1" id="mobileAdjustBackground"></div>
+        <div class="background1"></div>
             <div class="aboutme" id="mobileAdjust">
                 <h2 style="text-align: center;">Welcome!</h2>
                 <p>I'm Pexo and I'm <span id="age"></span> years old</p>
@@ -168,7 +168,6 @@
             document.getElementById("mobileAdjust").style.left = "0";
             document.getElementById("mobileAdjust").style.margin = "auto";
             document.getElementById("mobileAdjust").style.width = "380px";
-            document.getElementById("mobileAdjustBackground").style.minHeight = "110%";
             document.getElementById("mobileAdjust").style.top = "110px";
         } else {
             console.log("Desktop mode");
@@ -177,7 +176,6 @@
             document.getElementById("mobileAdjust").style.left = "auto";
             document.getElementById("mobileAdjust").style.margin = "0";
             document.getElementById("mobileAdjust").style.width = "410px";
-            document.getElementById("mobileAdjustBackground").style.minHeight = "100%";
             document.getElementById("mobileAdjust").style.top = "153px";
         }}
         // Initial check
