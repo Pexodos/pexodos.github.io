@@ -10,7 +10,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
             background-color: black;
-            overflow: hidden;
+            overflow-y: scroll;
             margin: 0; 
             padding: 0; 
             box-sizing: border-box; 
@@ -130,7 +130,7 @@
     </div>
 
     <div class="aboutmecontent">
-        <div class="background1"></div>
+        <div class="background1" id="mobileAdjustBackground"></div>
             <div class="aboutme" id="mobileAdjust">
                 <h2 style="text-align: center;">Welcome!</h2>
                 <p>I'm Pexo and I'm <span id="age"></span> years old</p>
@@ -143,7 +143,7 @@
                  <br><br><br><br><br><br><br><br><br>
                  <p>This website is still "Work in progress" <br>so don't expect too much.</p>
                 <p>It will develop further the more I learn from school <br>and in private.</p>
-                <p style="text-decoration: underline;">Current version of Page: V2</p>
+                <p style="text-decoration: underline;">Current version of Page: V2.1</p>
             </div>
     </div>
 
@@ -167,14 +167,15 @@
             document.getElementById("mobileAdjust").style.right = "0";
             document.getElementById("mobileAdjust").style.left = "0";
             document.getElementById("mobileAdjust").style.margin = "auto";
-            document.getElementById("mobileAdjust").style.width = "380px"
+            document.getElementById("mobileAdjust").style.width = "380px";
+            document.getElementById("mobileAdjustBackground").style.minHeight = "130%";
         } else {
             console.log("Desktop mode");
             // Code specific to desktop mode
             document.getElementById("mobileAdjust").style.right = "100px";
             document.getElementById("mobileAdjust").style.left = "auto";
             document.getElementById("mobileAdjust").style.margin = "0";
-            document.getElementById("mobileAdjust").style.width = "410px"
+            document.getElementById("mobileAdjust").style.width = "410px";
         }}
         // Initial check
         checkMode();

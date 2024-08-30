@@ -10,7 +10,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
             background-color: black;
-            overflow: hidden;
+            overflow-y: scroll;
             margin: 0; 
             padding: 0; 
             box-sizing: border-box; 
@@ -222,7 +222,7 @@
     </div>
 
     <div class="aboutmecontent">
-        <div class="background"></div>
+        <div class="background" id="mobileAdjustBackground"></div>
             <div class="socials" id="mobileAdjust">
                 <h2>Places in which you can find me:</h2>
                 <br></br>
@@ -330,14 +330,15 @@
             document.getElementById("mobileAdjust").style.right = "0";
             document.getElementById("mobileAdjust").style.left = "0";
             document.getElementById("mobileAdjust").style.margin = "auto";
-            document.getElementById("mobileAdjust").style.width = "370px"
+            document.getElementById("mobileAdjust").style.width = "370px";
+            document.getElementById("mobileAdjustBackground").style.minHeight = "130%";
         } else {
             console.log("Desktop mode");
             // Code specific to desktop mode
             document.getElementById("mobileAdjust").style.right = "0";
             document.getElementById("mobileAdjust").style.left = "0";
             document.getElementById("mobileAdjust").style.margin = "auto";
-            document.getElementById("mobileAdjust").style.width = "410px"
+            document.getElementById("mobileAdjust").style.width = "410px";
         }
         }
         // Initial check
