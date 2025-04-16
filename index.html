@@ -12,7 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: rgb(255, 255, 255);
             background-color: black;
-            overflow: hidden;
+            /* overflow: hidden; */
             margin: 0; 
             padding: 0; 
             box-sizing: border-box; 
@@ -58,19 +58,25 @@
             left:0px;
             right: 0px;
             /* background-color: rgba(0, 0, 0, 0.75); */
-            width: 410px;
+            width: 370px;
             height: 110px;
             /* line-height: 1.5; */
             padding: 10px;
             /* border-radius:30px; */
             text-align: center;
             font-family: fantasy;
-            font-size: 50px
+            font-size: 50px;
         }
         .topText{
             position: absolute;
             top: -15px;
-            left: 190px;
+            left: 10px;
+            margin-left: 43%;
+        }
+        .topImage{
+            position: absolute;
+            left: -5px;
+
         }
         
         .linkButtons {
@@ -166,8 +172,10 @@
     <div class="background"></div>
 
     <div class="content">
-        <div class="top mobileAdjust">
-            <img src="media/circlePexo.png" width="190px" alt="">
+        <div class="top">
+            <div class="topImage">
+                <img src="media/circlePexo.png" width="190px" alt="">
+            </div>
             <p class="topText">Pexodos</p>
         </div>
 
@@ -182,7 +190,7 @@
                 <p>I'm a learning developer, vr enthusiast <br> and like to play the piano <br> or make videos on Tiktok/Youtube</p>
             </div> 
             <!--  -->
-            <h2>Places in which you can find me:</h2>
+            <h2>Where to find me:</h2>
             <div class="linkButtons">
                 <!-- Button settings from here-->
                 <div class="content1">
