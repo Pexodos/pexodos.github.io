@@ -34,7 +34,7 @@
             margin-right: auto;
             left:0px;
             right: 0px;
-            background-color: rgba(0, 0, 0, 0.75);
+            background-color: rgba(14, 14, 14, 0.75);
             width: 410px;
             height: 650px;
             line-height: 1.5;
@@ -42,6 +42,9 @@
             border-radius:30px;
             text-align: center;
         }
+        /* .introduction{
+
+        } */
     /* Background and Box ending */
 
     /* Inside Box */
@@ -163,17 +166,21 @@
     <div class="background"></div>
 
     <div class="content">
-        <div class="top">
+        <div class="top mobileAdjust">
             <img src="media/circlePexo.png" width="190px" alt="">
             <p class="topText">Pexodos</p>
-            </div>
-        <div class="socials">
-            
-            <h2>Welcome!</h2>
-            <p>I'm Pexo and I'm <span id="age"></span> years old</p>
-            <p id="right">Today is the: <script id="right"> document.write(new Date().toLocaleDateString()); </script></p> 
-            <h3>Things about me!</h3>
-            <p>I'm a learning developer, vr enthusiast <br> and like to play the piano <br> or make videos on Tiktok/Youtube</p>
+        </div>
+
+            <!--  -->
+
+        <div class="socials mobileAdjust">
+            <div class="introduction">   
+                <h2>Welcome!</h2>
+                <p>I'm Pexo and I'm <span id="age"></span> years old</p>
+                <p id="right">Today is the: <script id="right"> document.write(new Date().toLocaleDateString()); </script></p> 
+                <h3>Things about me!</h3>
+                <p>I'm a learning developer, vr enthusiast <br> and like to play the piano <br> or make videos on Tiktok/Youtube</p>
+            </div> 
             <!--  -->
             <h2>Places in which you can find me:</h2>
             <div class="linkButtons">
@@ -232,6 +239,30 @@
     age--;
     }
     document.getElementById("age").innerHTML= age;
+
+    /* Plattform checker */
+    
+    function checkMode() {
+    let elements = document.querySelectorAll(".mobileAdjust");
+    elements.forEach(el => {
+        if (window.innerWidth <= 800) {
+            console.log("Mobile mode");
+            el.style.right = "0";
+            el.style.left = "0";
+            el.style.margin = "auto";
+            el.style.width = "370px";
+        } else {
+            console.log("Desktop mode");
+            el.style.right = "0";
+            el.style.left = "0";
+            el.style.margin = "auto";
+            el.style.width = "410px";
+        }
+    });
+    }
+    checkMode();
+    window.addEventListener('resize', checkMode);
+    /* Plattform checker ending*/
 </script>
 
 
