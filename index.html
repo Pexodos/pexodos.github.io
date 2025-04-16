@@ -3,186 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/pexoIcon.png">
+    <link rel="stylesheet" href="media/pexoIcon.png">
     <title>Pexodos</title>
-    <style>
+</head>
+<style>
+    /* Background and Box */
         body{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: white;
+            color: rgb(255, 255, 255);
             background-color: black;
             overflow: hidden;
             margin: 0; 
             padding: 0; 
             box-sizing: border-box; 
         }
-    
-        .headercontainer {
-            position: absolute;
-            min-width: 100%;
-            z-index: 10;
-            display: inline-block;
-            background-position-x: center;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        .header{
-            display: inline-flex;
-            margin-left: auto;
-            margin-left: 1cm;
-        }
-        
-        .headerbuttons{
-            position: absolute;
-            display: flex;
-            right: 10px;
-            top: 35px;
-        }
-        #menuButton{
-            border: none;
-            background: none;
-            padding: 1;
-            color: white;
-        }
-
-        .aboutmecontent{
-            position: absolute;
+        .background{
+            position: fixed;
+            background-image: url("media/test.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             min-width: 100%;
             min-height: 100%;
+            filter: blur(5px);
         }
-        .aboutme{
+        .socials{
             position: absolute;
             top: 153px;
+            margin-left: auto;
+            margin-right: auto;
+            left:0px;
+            right: 0px;
             background-color: rgba(0, 0, 0, 0.75);
             width: 410px;
-            height: 680px;
+            height: 650px;
             line-height: 1.5;
             padding: 10px;
-            border-radius: 20px;
-            overflow: hidden;
-        }
-        p{
-            position: relative;
-            text-align: center;
-            
-        }
-        .img{
-            filter: blur(00px);
-            height: 100vh;
-            width: 100vw;
-            object-fit: cover;
-        }
-        .aboutmeimg {
-            position: absolute;
-            top: 85px;
-            right: 175px;
-            width: 50px;
-        }
-        .right{
-            text-align: right;
-            padding-right: 0.5cm;
-        }
-        .background1{
-            position: absolute;
-            background-image: url(media/1920_VRChat2.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            min-width: 100%;
-            min-height: 100%;
-            filter: blur(2px);
-        }
-
-        .content1{
-            position: absolute;
-            top: 70%;
-            right: 90px;
-            background-color: rgba(0, 0, 0, 0.75);
-            width: 410px;
-            height: 190px;
-            line-height: 1.5;
-            padding: 10px;
-            border-radius: 5%;
-        }
-
-        .discord{
-            display: block;
-            position: absolute;
-            border: none;
-            width: 97%;
-            height: 100%;
-            scale: 1;
+            border-radius:30px;
             text-align: center;
         }
+    /* Background and Box ending */
 
+    /* Inside Box */
         
-    </style>
+        .top{
+            display: flex;
+            position: absolute;
+            top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            left:0px;
+            right: 0px;
+            /* background-color: rgba(0, 0, 0, 0.75); */
+            width: 410px;
+            height: 110px;
+            /* line-height: 1.5; */
+            padding: 10px;
+            /* border-radius:30px; */
+            text-align: center;
+            font-family: fantasy;
+            font-size: 50px
+        }
+        .topText{
+            position: absolute;
+            top: -15px;
+            left: 190px;
+        }
+        
+        .linkButtons {
+            display: flex;
+            align-items: center; /* Vertically centers the content */
+            justify-content: center; /* Horizontally centers the content */
+            width: 100%; /* Ensures the container takes up full width */
+            height: 100%; /* Ensures the container takes up full height */
+            position: relative; /* Keeps the positioning intact */
+        }
+
+        .buttonDesign {
+            display: flex;
+            align-items: center; /* Vertically centers content */
+            justify-content: center; /* Horizontally centers content */
+            width: 300px;
+            height: 40px;
+            line-height: 1.5;
+            padding: 10px;
+            border-radius: 50px;
+            overflow: hidden;
+            margin: auto;
+            background: linear-gradient(#07361fbb 0 0) var(--p,0)/var(--p,0) no-repeat;
+            transition: .4s, background-position 0s;
+            background-color: rgba(78, 78, 78, 0.75);
+            position: relative;
+            z-index: 1;
+        }
+        .buttonDesign:hover {
+            width: 330px;
+            --p: 100%;
+            color: #fff;
+            font-size: large;
+            /* Changes the size of text and clickBox */
+        }
+        /* Image and tex placement in button */
+            .buttonDesign img {
+                width: 40px;
+                height: auto; /* Maintains the aspect ratio */
+                margin-left: 5px; /* Adds space between the image and the text */
+                margin-right: -45px;
+            }
+            .text {
+                text-align: center; /* Centers the text horizontally */
+                flex-grow: 1; /* Ensures the text takes up the remaining space */
+            }
+        /* Image and text placement in button ending     */
+
+        /* The content thingys */
+            .content1{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                margin: auto; 
+            }
+            .content2{
+                position: absolute;
+                top: 70px;
+                left: 0px;
+                right: 0px;
+                margin: auto; 
+            }
+            .content3{
+                position: absolute;
+                top: 140px;
+                left: 0px;
+                right: 0px;
+                margin: auto; 
+            }
+            .content4{
+                position: absolute;
+                top: 210px;
+                left: 0px;
+                right: 0px;
+                margin: auto; 
+            }
+        
+        /* The content thingys */
+        #button {
+            position: absolute;
+            top: -10;
+            left: -10;
+            width: 360px;
+            height: 70px;
+        }
+    /* Inside Box ending*/
+
     
-</head>
+
+</style>
 <body>
-    <div class="headercontainer">
-        <div class="header">
-            <h1>Pexodos</h1>
-            <div class="headerbuttons">
-                <button onclick="window.location.href='index.html'" id="menuButton"> Home </button> 
-                <br>
-                <button onclick="window.location.href='page2.html'" id="menuButton"> Socials </button>
+    <div class="background"></div>
+
+    <div class="content">
+        <div class="top">
+            <img src="media/circlePexo.png" width="190px" alt="">
+            <p class="topText">Pexodos</p>
+            </div>
+        <div class="socials">
+            
+            <h2>Welcome!</h2>
+            <p>I'm Pexo and I'm <span id="age"></span> years old</p>
+            <p id="right">Today is the: <script id="right"> document.write(new Date().toLocaleDateString()); </script></p> 
+            <h3>Things about me!</h3>
+            <p>I'm a learning developer, vr enthusiast <br> and like to play the piano <br> or make videos on Tiktok/Youtube</p>
+            <!--  -->
+            <h2>Places in which you can find me:</h2>
+            <div class="linkButtons">
+                <!-- Button settings from here-->
+                <div class="content1">
+                    <div class="buttonDesign"> 
+                        <a href="https://x.com/pexodos" id="button"></a>
+                            <img src="media/Twitter.png" width="50px" alt="">
+                        <div class="text">
+                            <p>Twitter</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content2">
+                    <div class="buttonDesign"> 
+                        <a href="https://www.tiktok.com/@pexodos" id="button"></a>
+                            <img src="media/Tiktok.png" width="50px" alt="">
+                        <div class="text">
+                            <p>TikTok</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content3">
+                    <div class="buttonDesign"> 
+                        <a href="https://www.twitch.tv/pexocat" id="button"></a>
+                            <img src="media/Twitch.png" width="50px" alt="">
+                        <div class="text">
+                            <p>Twitch</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content4">
+                    <div class="buttonDesign"> 
+                        <a href="https://bsky.app/profile/pexodos.bsky.social" id="button"></a>
+                            <img src="media/Bluesky_Logo.png" width="50px" alt="">
+                        <div class="text">
+                            <p>Bluesky</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="aboutmecontent">
-        <div class="background1"></div>
-            <div class="aboutme" id="mobileAdjust">
-                <h2 style="text-align: center;">Welcome!</h2>
-                <p>I'm Pexo and I'm <span id="age"></span> years old</p>
-                <p id="right">Today is the: <script id="right"> document.write(new Date().toLocaleDateString()); </script></p> 
-                <h3 style="text-align: center;">Things about me:</h3>
-                <p>I'm a learning developer, vr enthusiast <br> and like to play the piano <br> or make videos on Tiktok/Youtube</p>
-                <div>
-                    <iframe class="discord" src="https://lanyard.cnrad.dev/api/499278477694861325?borderRadius=20px&idleMessage=currently%20doing%20nothing...." style="margin: 0 auto;"></iframe>
-                 </div>
-                 <br><br><br><br><br><br><br><br><br>
-                 <p>This website is still "Work in progress"</p>
-                <p>It will develop further the more I learn from school <br>and in private.</p>
-                <p style="text-decoration: underline;">Current version of Page: V2.1</p>
-            </div>
-    </div>
 
-    <script>
-        var dob = '20051228'; 
-        var year = Number(dob.substr(0, 4));
-        var month = Number(dob.substr(4, 2)) - 1;
-        var day = Number(dob.substr(6, 2));
-        var today = new Date();
-        var age = today.getFullYear() - year;
-        if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
-        age--;
-        }
-        document.getElementById("age").innerHTML= age;
 
-                                 
-        function checkMode() {
-        if (window.innerWidth <= 800) {
-            console.log("Mobile mode");
-            // Code specific to mobile mode
-            document.getElementById("mobileAdjust").style.right = "0";
-            document.getElementById("mobileAdjust").style.left = "0";
-            document.getElementById("mobileAdjust").style.margin = "auto";
-            document.getElementById("mobileAdjust").style.width = "380px";
-            document.getElementById("mobileAdjust").style.top = "110px";
-        } else {
-            console.log("Desktop mode");
-            // Code specific to desktop mode
-            document.getElementById("mobileAdjust").style.right = "100px";
-            document.getElementById("mobileAdjust").style.left = "auto";
-            document.getElementById("mobileAdjust").style.margin = "0";
-            document.getElementById("mobileAdjust").style.width = "410px";
-            document.getElementById("mobileAdjust").style.top = "153px";
-        }}
-        // Initial check
-        checkMode();
-        // Check on resize
-        window.addEventListener('resize', checkMode);
-    </script>
+
+<script>
+    var dob = '20051228'; 
+    var year = Number(dob.substr(0, 4));
+    var month = Number(dob.substr(4, 2)) - 1;
+    var day = Number(dob.substr(6, 2));
+    var today = new Date();
+    var age = today.getFullYear() - year;
+    if (today.getMonth() < month || (today.getMonth() == month && today.getDate() < day)) {
+    age--;
+    }
+    document.getElementById("age").innerHTML= age;
+</script>
 
 
 </body>
